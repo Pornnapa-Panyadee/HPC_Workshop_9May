@@ -1,0 +1,47 @@
+&CONTROL
+    calculation = "scf"
+    max_seconds =  8.64000e+04
+    pseudo_dir  = "pseudo"
+/
+
+&SYSTEM
+    a           =  4.99265e+00
+    c           =  6.93393e+00
+    degauss     =  1.00000e-02
+    ecutrho     =  3.30744e+01
+    ecutwfc     =  3.67493e+00
+    ibrav       = 6
+    nat         = 12
+    ntyp        = 2
+    occupations = "fixed"
+    smearing    = "gaussian"
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {gamma}
+
+ATOMIC_SPECIES
+Si   28.08550  Si.pbe-n-kjpaw_psl.1.0.0.UPF
+O    15.99940  O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {crystal}
+Si    0.698658   0.698658   0.500000
+Si    0.801341   0.198658   0.750000
+Si    0.198658   0.801341   0.250000
+Si    0.301341   0.301341   0.000000
+O     0.893568   0.761386   0.320108
+O     0.106431   0.238613   0.820108
+O     0.761386   0.893568   0.679891
+O     0.261386   0.606431   0.070108
+O     0.238613   0.106431   0.179891
+O     0.393568   0.738613   0.429891
+O     0.606431   0.261386   0.929891
+O     0.738613   0.393568   0.570108
+
